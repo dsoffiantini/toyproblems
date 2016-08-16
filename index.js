@@ -24,11 +24,36 @@ var countBits = function(n) {
 //move all zeroes to end of array
 
 var moveZeros = function (arr) {
-  for(var i = arr.length; i--;) {
+  for(var i = arr.length; i--) {
      if(arr[i] === 0) {
         arr.splice(i, 1);
         arr.push(0);
       }
   }
   return arr;
+}
+
+
+//find total of all multiples of 3 and 5 under a given number
+
+function solution(number){
+  var multiples = [];
+  var total = 0;
+  for (var i = 1; i < number; i++) {
+    if (i % 5 === 0 && i % 3 === 0) {
+      multiples.push(i);
+      }
+    else if (i % 5 === 0) {
+      multiples.push(i);
+      }
+    else if (i % 3 === 0) {
+      multiples.push(i);
+      }
+    }
+   for (var i = 0; i < multiples.length; i++) {
+     total += multiples[i];
+     }
+    return total;
+
+
 }
