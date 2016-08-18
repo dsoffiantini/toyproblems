@@ -57,3 +57,24 @@ function solution(number){
 
 
 }
+
+//turn rgb into hex code
+
+function rgb(r, g, b){
+	if (r > 255) {
+		r = 255;
+	}
+	if (g > 255) {
+		g = 255;
+	}
+	if (b > 255) {
+		b = 255;
+	}
+  return ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+}
+
+//reverse individual words in a string, but not string itself
+
+function reverseWords(str) {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
